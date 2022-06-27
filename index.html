@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Holaaa1!!!! ╰(*°▽°*)╯</title>
+        <title>Holaaa1!!!! \(≧▽≦\) </title>
     </head>
     <body>
         <h1>Esta es mi página web (*/ω＼*)</h1>
@@ -9,3 +9,28 @@
         <img src="https://imgur.com/a/TcnFmMn"/>
     </body>
 </html>
+<script>
+    
+    function cambio(msg, uno, dos ) {
+        var estado = true
+        cambio.timer = setInterval(() => {
+            if (estado) {
+                document.title = msg + uno;
+                estado = false;
+            } else {
+                document.title = msg + dos;
+                estado = true;
+            }
+        }, 200);
+    }
+    function stop(){
+        clearInterval(cambio.timer)
+    }
+    window.onfocus = function(){
+        cambio( msg = "Holaaa1!!!!", uno = " (/≧▽≦)/", dos = " \\(≧▽≦\\)")
+    }
+    window.onblur = function(){
+        stop();
+        document.title = ""
+    }
+</script>
